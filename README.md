@@ -54,7 +54,7 @@ This app is a strip down version of Rate my Professor solely for UB students and
         * contains ratings
         * posts
         * possible classes
-* Stream Subject List : User can search up the subject and the top professors would be listed from best rating to worst rating
+* Stream Subject List : User can view all the classes in the CS cirriculum and can search up the subject
 
 * Detail : User can press on Professor's name and view profile
     * User can view ratings/reviews
@@ -63,6 +63,9 @@ This app is a strip down version of Rate my Professor solely for UB students and
         * option/ button(or max number we specific if there is to many) to see all comments
 * Detail: * Top rated professor for each class
     * additional feature
+
+* Detail Subject List: User can press on the subject and it would take you to a list of professors that teach that class and the top professors would be listed from best rating to worst rating
+
 * Creation: Students make a rating/review
     * User can create a review/rating for a professor
         * Include the class
@@ -91,17 +94,10 @@ This app is a strip down version of Rate my Professor solely for UB students and
     * Stream Subject List
 * Detail Professor List
     * Stream List of Professors
+* Stream Subject List
+    * Stream List of Professors
+    * Detail Subject List
 * Profile
-   * Go to next screen by logging in
-       * List of professors
-* Professors List (shows name, and overall rating) -- stream
-   * Clicking on professor leads to detailed professor view
-   * Clicking on tab navigation leads to profile / recent stream
-* Detailed Professor View
-    * Shows specific ratings, and comments of professor
-* Profile
-    * Shows users specific posts, how many posts, average rating given 
-* Stream of post recent comments & ratings
 
 ## Wireframes
 https://www.figma.com/file/mPGoCrNJekPHP9xQzhaZIR/CSE-UB-Rate-My-Professor?node-id=0%3A1
