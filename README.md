@@ -104,8 +104,8 @@ This app is a strip down version of Rate my Professor solely for UB students and
 * Stream of post recent comments & ratings
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+https://www.figma.com/file/mPGoCrNJekPHP9xQzhaZIR/CSE-UB-Rate-My-Professor?node-id=0%3A1
+<img src="https://github.com/CS-UBRateMyProfessor/RateMyProfessor/blob/main/FigmaWireframe.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
