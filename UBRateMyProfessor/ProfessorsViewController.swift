@@ -44,9 +44,9 @@ class ProfessorsViewController: UIViewController, UITableViewDelegate, UITableVi
         let professorName = prof["name"]
         let rating = prof["Overall_Rating"]
         let subjects = prof["subjects"]
-        cell.professorName = professorName as! UILabel
-        cell.overallrating = rating as! UILabel
-        cell.subjectsList = subjects as! UILabel
+        cell.professorName.text = professorName 
+        cell.overallrating.text = rating
+        cell.subjectsList.text = subjects
         
         return cell
     }
