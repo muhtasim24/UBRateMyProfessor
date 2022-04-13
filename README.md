@@ -32,7 +32,9 @@ This app is a strip down version of Rate my Professor solely for UB students and
 - [ ] User can search up professors
 - [ ] User can view all ratings and all subjects for each professor
 - [ ] User can create an account
-- [ ] User can login -- In progress
+- [X] User can login
+- [X] User stays logged in across restarts
+- [ ] User can logout
 - [ ] User can add classes that each professor taught
     - [ ] as text/searchs box 
 
