@@ -169,3 +169,10 @@ This app is a strip down version of Rate my Professor solely for UB students and
 - Add New Review
     - (Read / GET) Get specific professor
     - (Create / POST) Create new review and add under professor
+
+# Week 1 Progress
+- [X] Add back4app backend
+- [X] Add launch screen
+
+## Gif
+<img src="https://github.com/CS-UBRateMyProfessor/RateMyProfessor/blob/main/Week1.gif" width=600>
