@@ -1,0 +1,6 @@
+framework module Pods_UBRateMyProfessor_UBRateMyProfessorUITests {
+  umbrella header "Pods-UBRateMyProfessor-UBRateMyProfessorUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
