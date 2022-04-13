@@ -28,19 +28,19 @@ This app is a strip down version of Rate my Professor solely for UB students and
 
 **Required Must-have Stories**
 
-* User can create a review/rating
-* User can search up professors
-* User can view all ratings and all subjects for each professor
-* User can create an account
-* User can login
-* User can add classes that each professor taught
-    * as text/searchs box 
+- [ ] User can create a review/rating
+- [ ] User can search up professors
+- [ ] User can view all ratings and all subjects for each professor
+- [ ] User can create an account
+- [ ] User can login -- In progress
+- [ ] User can add classes that each professor taught
+    - [ ] as text/searchs box 
 
 **Optional Nice-to-have Stories**
 
-* List best teachers for each subject (build schedule of ideal teachers using classes)
-* Alerts for Professors when they recieve a review/rating
-* Schedule
+- [ ] List best teachers for each subject (build schedule of ideal teachers using classes)
+- [ ] Alerts for Professors when they recieve a review/rating
+- [ ] Schedule
 
 ### 2. Screen Archetypes
 * Login Screen
@@ -169,3 +169,10 @@ This app is a strip down version of Rate my Professor solely for UB students and
 - Add New Review
     - (Read / GET) Get specific professor
     - (Create / POST) Create new review and add under professor
+
+# Week 1 Progress
+- [X] Add back4app backend
+- [X] Add launch screen
+
+## Gif
+<img src="https://github.com/CS-UBRateMyProfessor/RateMyProfessor/blob/main/Week1.gif" width=600>
