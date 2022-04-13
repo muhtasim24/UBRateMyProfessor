@@ -91,11 +91,8 @@
             <objects>
                 <tableViewController title="Professor List" id="0Fx-pZ-RRE" customClass="ProfessorsViewC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="BOz-qp-fbY">
-<<<<<<< HEAD
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-=======
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
->>>>>>> a263fff6c8634eaed0a9e9e31ac5eb2746b61d29
+
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -174,15 +171,10 @@
         <!--Navigation Controller-->
         <scene sceneID="598-lG-E43">
             <objects>
-<<<<<<< HEAD
                 <navigationController modalPresentationStyle="fullScreen" id="VdO-gh-4XM" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="fXE-Ke-vQK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-=======
-                <navigationController storyboardIdentifier="FeedNavigationController" id="VdO-gh-4XM" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fXE-Ke-vQK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
->>>>>>> a263fff6c8634eaed0a9e9e31ac5eb2746b61d29
+
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="AccentColor"/>
                         <color key="tintColor" systemColor="linkColor"/>
