@@ -24,16 +24,16 @@
             </objects>
             <point key="canvasLocation" x="20" y="98"/>
         </scene>
-        <!--Title-->
+        <!--Professor List-->
         <scene sceneID="tiN-Xg-h7h">
             <objects>
-                <tableViewController id="0Fx-pZ-RRE" sceneMemberID="viewController">
+                <tableViewController title="Professor List" id="0Fx-pZ-RRE" customClass="ProfessorsViewC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="BOz-qp-fbY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="148" id="lAk-kX-FNY">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="professorCell" rowHeight="148" id="lAk-kX-FNY" customClass="professorCell" customModule="UBRateMyProfessor" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="148"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lAk-kX-FNY" id="rew-if-FYa">
@@ -77,6 +77,11 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="overallrating" destination="ZQ4-4V-NGh" id="w2E-da-qZd"/>
+                                    <outlet property="professorName" destination="phK-nL-27Q" id="IF4-ak-Ur3"/>
+                                    <outlet property="subjectsList" destination="Eum-0G-yeD" id="s1j-Ok-pvZ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -84,10 +89,17 @@
                             <outlet property="delegate" destination="0Fx-pZ-RRE" id="OWT-xJ-iPo"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="LvH-Lk-q0U">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="4VO-IM-Pu4"/>
-                        <barButtonItem key="rightBarButtonItem" title="+" id="270-DQ-IEb"/>
+                    <navigationItem key="navigationItem" title="Professors" id="LvH-Lk-q0U">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="4VO-IM-Pu4">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="+" id="270-DQ-IEb">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="BOz-qp-fbY" id="0hR-wt-UqC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fP-uT-SJA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,8 +108,8 @@
         <!--Navigation Controller-->
         <scene sceneID="598-lG-E43">
             <objects>
-                <navigationController id="VdO-gh-4XM" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fXE-Ke-vQK">
+                <navigationController modalPresentationStyle="fullScreen" id="VdO-gh-4XM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="fXE-Ke-vQK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="AccentColor"/>

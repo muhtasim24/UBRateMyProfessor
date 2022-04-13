@@ -19,6 +19,8 @@
 		ABCCB44E7246A6044DC8946D /* Pods_UBRateMyProfessor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A0AD4A7299D241804B8407 /* Pods_UBRateMyProfessor.framework */; };
 		B4AEDD37D704928E1FBCCE3D /* Pods_UBRateMyProfessor_UBRateMyProfessorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC923277FE3C9B97F0350B7A /* Pods_UBRateMyProfessor_UBRateMyProfessorUITests.framework */; };
 		D803DA0228065FAB00F2F67B /* PostsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D803DA0128065FAB00F2F67B /* PostsController.swift */; };
+		D803DA0428078A1E00F2F67B /* ProfessorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D803DA0328078A1E00F2F67B /* ProfessorsViewController.swift */; };
+		D803DA0628078A5500F2F67B /* professorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D803DA0528078A5500F2F67B /* professorCell.swift */; };
 		DE7094D78017FD665022A9EE /* Pods_UBRateMyProfessorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A442AD9D32C92123A836A8F /* Pods_UBRateMyProfessorTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		AAE2B947BBD0E36ECD72FDCF /* Pods-UBRateMyProfessorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBRateMyProfessorTests.debug.xcconfig"; path = "Target Support Files/Pods-UBRateMyProfessorTests/Pods-UBRateMyProfessorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5389B4497EEB7497D32325D /* Pods-UBRateMyProfessor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBRateMyProfessor.release.xcconfig"; path = "Target Support Files/Pods-UBRateMyProfessor/Pods-UBRateMyProfessor.release.xcconfig"; sourceTree = "<group>"; };
 		D803DA0128065FAB00F2F67B /* PostsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsController.swift; sourceTree = "<group>"; };
+		D803DA0328078A1E00F2F67B /* ProfessorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorsViewController.swift; sourceTree = "<group>"; };
+		D803DA0528078A5500F2F67B /* professorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = professorCell.swift; sourceTree = "<group>"; };
 		FC923277FE3C9B97F0350B7A /* Pods_UBRateMyProfessor_UBRateMyProfessorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBRateMyProfessor_UBRateMyProfessorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEEAFECA1A493415CB927B41 /* Pods-UBRateMyProfessor-UBRateMyProfessorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBRateMyProfessor-UBRateMyProfessorUITests.debug.xcconfig"; path = "Target Support Files/Pods-UBRateMyProfessor-UBRateMyProfessorUITests/Pods-UBRateMyProfessor-UBRateMyProfessorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +126,8 @@
 				9BE7897627FA017900DF95AE /* SceneDelegate.swift */,
 				9BE7897827FA017900DF95AE /* ViewController.swift */,
 				9BE7897A27FA017900DF95AE /* Main.storyboard */,
+				D803DA0328078A1E00F2F67B /* ProfessorsViewController.swift */,
+				D803DA0528078A5500F2F67B /* professorCell.swift */,
 				D803DA0128065FAB00F2F67B /* PostsController.swift */,
 				9BE7897D27FA017C00DF95AE /* Assets.xcassets */,
 				9BE7897F27FA017C00DF95AE /* LaunchScreen.storyboard */,
@@ -157,7 +163,6 @@
 				AAE2B947BBD0E36ECD72FDCF /* Pods-UBRateMyProfessorTests.debug.xcconfig */,
 				4EB93214786E59908565258D /* Pods-UBRateMyProfessorTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -410,8 +415,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D803DA0428078A1E00F2F67B /* ProfessorsViewController.swift in Sources */,
 				9BE7897927FA017900DF95AE /* ViewController.swift in Sources */,
 				D803DA0228065FAB00F2F67B /* PostsController.swift in Sources */,
+				D803DA0628078A5500F2F67B /* professorCell.swift in Sources */,
 				9BE7897527FA017900DF95AE /* AppDelegate.swift in Sources */,
 				9BE7897727FA017900DF95AE /* SceneDelegate.swift in Sources */,
 			);
@@ -593,7 +600,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4VF47445JF;
+				DEVELOPMENT_TEAM = 22SXDSY42T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UBRateMyProfessor/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -622,7 +629,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4VF47445JF;
+				DEVELOPMENT_TEAM = 22SXDSY42T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UBRateMyProfessor/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
