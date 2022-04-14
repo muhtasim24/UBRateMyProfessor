@@ -34,7 +34,7 @@ This app is a strip down version of Rate my Professor solely for UB students and
 - [ ] User can create an account
 - [X] User can login
 - [X] User stays logged in across restarts
-- [ ] User can logout
+- [X] User can logout
 - [ ] User can add classes that each professor taught
     - [ ] as text/searchs box 
 
@@ -176,5 +176,9 @@ This app is a strip down version of Rate my Professor solely for UB students and
 - [X] Add back4app backend
 - [X] Add launch screen
 
-## Gif
+## Video Walkthrough Gifs
+
+Here's a walkthrough of implemented user stores:
+
 <img src="https://github.com/CS-UBRateMyProfessor/RateMyProfessor/blob/main/Week1.gif" width=600>
+<img src= 'http://g.recordit.co/IIEeawoutZ.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
