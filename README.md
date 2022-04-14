@@ -180,5 +180,8 @@ This app is a strip down version of Rate my Professor solely for UB students and
 
 Here's a walkthrough of implemented user stores:
 
-<img src="https://github.com/CS-UBRateMyProfessor/RateMyProfessor/blob/main/Week1.gif" width=600>
+User can login, stayed logged in, logout: 
 <img src= 'http://g.recordit.co/IIEeawoutZ.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+<img src= 'https://github.com/CS-UBRateMyProfessor/RateMyProfessor/blob/main/Week1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
