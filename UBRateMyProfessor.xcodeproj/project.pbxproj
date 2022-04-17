@@ -24,6 +24,7 @@
 		D803DA0228065FAB00F2F67B /* PostsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D803DA0128065FAB00F2F67B /* PostsController.swift */; };
 		D803DA0428078A1E00F2F67B /* ProfessorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D803DA0328078A1E00F2F67B /* ProfessorsViewController.swift */; };
 		D803DA0628078A5500F2F67B /* professorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D803DA0528078A5500F2F67B /* professorCell.swift */; };
+		D8F2228F280CB5A600B7182E /* ProfessorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F2228E280CB5A600B7182E /* ProfessorsTableViewController.swift */; };
 		DE7094D78017FD665022A9EE /* Pods_UBRateMyProfessorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A442AD9D32C92123A836A8F /* Pods_UBRateMyProfessorTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		D803DA0128065FAB00F2F67B /* PostsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsController.swift; sourceTree = "<group>"; };
 		D803DA0328078A1E00F2F67B /* ProfessorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorsViewController.swift; sourceTree = "<group>"; };
 		D803DA0528078A5500F2F67B /* professorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = professorCell.swift; sourceTree = "<group>"; };
+		D8F2228E280CB5A600B7182E /* ProfessorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorsTableViewController.swift; sourceTree = "<group>"; };
 		FC923277FE3C9B97F0350B7A /* Pods_UBRateMyProfessor_UBRateMyProfessorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBRateMyProfessor_UBRateMyProfessorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEEAFECA1A493415CB927B41 /* Pods-UBRateMyProfessor-UBRateMyProfessorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBRateMyProfessor-UBRateMyProfessorUITests.debug.xcconfig"; path = "Target Support Files/Pods-UBRateMyProfessor-UBRateMyProfessorUITests/Pods-UBRateMyProfessor-UBRateMyProfessorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +135,7 @@
 				9BE7897827FA017900DF95AE /* ViewController.swift */,
 				9BE7897A27FA017900DF95AE /* Main.storyboard */,
 				D803DA0328078A1E00F2F67B /* ProfessorsViewController.swift */,
+				D8F2228E280CB5A600B7182E /* ProfessorsTableViewController.swift */,
 				D803DA0528078A5500F2F67B /* professorCell.swift */,
 				D803DA0128065FAB00F2F67B /* PostsController.swift */,
 				9BE7897D27FA017C00DF95AE /* Assets.xcassets */,
@@ -253,6 +256,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					1,
+				);
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
@@ -429,6 +435,7 @@
 				9BE7897927FA017900DF95AE /* ViewController.swift in Sources */,
 				D803DA0228065FAB00F2F67B /* PostsController.swift in Sources */,
 				D803DA0628078A5500F2F67B /* professorCell.swift in Sources */,
+				D8F2228F280CB5A600B7182E /* ProfessorsTableViewController.swift in Sources */,
 				9BE7897527FA017900DF95AE /* AppDelegate.swift in Sources */,
 				5DFCBE742807892E007BAE86 /* LoginViewController.swift in Sources */,
 				5DFCBE762807893F007BAE86 /* FeedViewController.swift in Sources */,
@@ -670,7 +677,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4VF47445JF;
+				DEVELOPMENT_TEAM = 22SXDSY42T;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
@@ -691,7 +698,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4VF47445JF;
+				DEVELOPMENT_TEAM = 22SXDSY42T;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
@@ -711,7 +718,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4VF47445JF;
+				DEVELOPMENT_TEAM = 22SXDSY42T;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = codepath.org.UBRateMyProfessorUITests;
@@ -730,7 +737,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4VF47445JF;
+				DEVELOPMENT_TEAM = 22SXDSY42T;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = codepath.org.UBRateMyProfessorUITests;

@@ -13,10 +13,20 @@ class ProfessorsViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("It loaded")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
         tableView.delegate = self
         tableView.dataSource = self
+        
+        
 
         // Do any additional setup after loading the view.
+    }
+    
+    private func configureItems(){
+        navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -35,7 +45,8 @@ class ProfessorsViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return profs.count
+        1
+        //return profs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

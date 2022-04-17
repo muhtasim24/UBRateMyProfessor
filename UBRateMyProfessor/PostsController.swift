@@ -6,14 +6,39 @@
 //
 
 import UIKit
+import Parse
 
 class PostsController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureItems()
+        
 
         // Do any additional setup after loading the view.
     }
+    
+    private func configureItems(){
+        title = "Professors"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .add,
+            target: self,
+            action: nil)
+        let signOut = UIBarButtonItem(title: "Logout",style: .done, target: self, action: #selector(logoutUser))
+        self.navigationItem.leftBarButtonItem = signOut
+        
+    }
+
+    
+    
+    @objc func logoutUser(){
+        PFUser.logOut()
+        self.dismiss(animated: true, completion: nil)
+        
+        
+    }
+    
+    
     
 
     /*
