@@ -176,9 +176,18 @@ This app is a strip down version of Rate my Professor solely for UB students and
 - [X] Add back4app backend
 - [X] Add launch screen
 
+# Week 2 Progress
+- [X] User can login
+- [X] User can stay logged in
+- [X] User can logout
+- [X] User can create an account
+- [ ] User can create a new rating/review (in progress)
+
 ## Video Walkthrough Gifs
 
 Here's a walkthrough of implemented user stores:
+
+<img src= 'http://g.recordit.co/jNhapE9g7t.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <img src= 'http://g.recordit.co/IIEeawoutZ.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
