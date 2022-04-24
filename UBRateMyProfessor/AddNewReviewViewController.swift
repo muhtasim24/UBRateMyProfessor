@@ -11,8 +11,6 @@ import Parse
 class AddNewReviewViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet weak var pickerView: UIPickerView!
-    var subjectsList = [PFObject]()
-    var profsList = [PFObject]()
     //var subjects = ["331","250", "220"]
     var subjects: [PFObject] = []
     //var profs = ["Hartlott" , "Blanton", "Alphonce"]
@@ -21,6 +19,12 @@ class AddNewReviewViewController: UIViewController, UIPickerViewDataSource, UIPi
     var combined = [[PFObject]]()
     var subjectToPass: String = ""
     var professorsToPass: String = ""
+    var professor = PFObject(className: "professor")
+    var Prquery = PFQuery(className: "professor")
+    var ProfessorID : String = ""
+    var subject = PFObject(className: "subject")
+    var Subquery = PFQuery(className: "subject")
+    var SubjectID : String = ""
     
     
     var boolProfText : Bool = false
@@ -37,9 +41,22 @@ class AddNewReviewViewController: UIViewController, UIPickerViewDataSource, UIPi
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let query = PFQuery(className: "professor")
-        query.includeKey("name")
-        query.findObjectsInBackground{( professors, error) in
+        Prquery = PFQuery(className: "professor")
+        //let array: [PFObject]
+        do {
+            // Create audio player object
+            //print(try query.findObjects())
+            try self.profs = Prquery.findObjects()
+                    
+            // Play the sound
+
+        }
+        catch {
+            // Couldn't create audio player object, log the error
+            print("shit")
+        }
+        
+        Prquery.findObjectsInBackground{( professors, error) in
             if professors != nil {
                 self.profs = professors!
             } else {
@@ -47,12 +64,39 @@ class AddNewReviewViewController: UIViewController, UIPickerViewDataSource, UIPi
             }            
             
         }
-        print(self.profs)
+        
+        Subquery = PFQuery(className: "subject")
+        do {
+            // Create audio player object
+            //print(try query.findObjects())
+            try self.subjects = Subquery.findObjects()
+                    
+            // Play the sound
+
+        }
+        catch {
+            // Couldn't create audio player object, log the error
+            print("shit")
+        }
+        
+        Subquery.findObjectsInBackground{( subjects, error) in
+            if subjects != nil {
+                self.subjects = subjects!
+            } else {
+                print("Empty professors list")
+            }
+            
+        }
+        
+        
+
+        //print(query)
+        //print(self.profs)
         pickerView.delegate = self
         pickerView.dataSource = self
         combined.append(self.profs)
         combined.append(self.subjects)
-        print(combined)
+        //print(combined)
         self.configureItems()
         
         // Do any additional setup after loading the view.
@@ -88,7 +132,14 @@ class AddNewReviewViewController: UIViewController, UIPickerViewDataSource, UIPi
         
         if (self.boolProfText == true && self.boolSubText == true) {
             self.AddNewProfessorAndSubject()
+        } else if((self.boolProfText == false && self.boolSubText == true)){
+            self.AddPostNewSubject()
+        } else if((self.boolProfText == false && self.boolSubText == false)){
+            self.AddNewPost()
+        } else if((self.boolProfText == true && self.boolSubText == false)){
+            self.AddPostNewProfessor()
         }
+        
                 
         print("Submited: \(self.professorsToPass)... \(self.subjectToPass) ... \(qualrating)...\(difrating)... \(self.reviewTextView.text!)")
         //self.performSegue(withIdentifier: "AddPost", sender: nil)
@@ -104,12 +155,34 @@ class AddNewReviewViewController: UIViewController, UIPickerViewDataSource, UIPi
         return combined[component].count + 1
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        var selected:PFObject
         if row == combined[component].count {
             return "other"
         } else {
-            return "\(combined[component][row])"
+            if(component == 1 ){
+                selected = combined[component][row]
+                //print("printing")
+                //print(selected)
+                self.subject = selected
+                let id = selected.objectId
+                self.SubjectID = (id)!
+                let subject = selected["subject"]
+                return subject as? String
+            } else {
+                selected = combined[component][row]
+                //print("printing")
+                //print(selected)
+                self.professor = selected
+                let id = selected.objectId!
+                print(id )
+                self.ProfessorID = id
+                let name = selected["name"]
+                //print(name as! String)
+                return name as? String
+            }
         }
     }
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if row == combined[component].count {
             if component == 0 {
@@ -144,35 +217,239 @@ class AddNewReviewViewController: UIViewController, UIPickerViewDataSource, UIPi
     }
     
     private func AddNewProfessorAndSubject(){
-        let profObj = PFObject(className: "professor")
-        profObj["name"] = self.professorsToPass
-        profObj["subject"] = self.subjectToPass
-        profObj["Quality_Rating"] = Int(self.qualityRatingLabel.text!)
-        profObj["Difficulty_Rating"] = Int(self.difficultyRatingLabel.text!)
-        profObj["reviews"] = self.reviewTextView.text!
-        profObj["NumberOfRatings"] = 1
-        //profObj["Raw_Difficulty_Rating"] = Int(self.difficultyRatingLabel.text!)
-        //profObj["Raw_Quality_Rating"] = Int(self.qualityRatingLabel.text!)
-        let subObj = PFObject(className: "subject")
-        subObj["Subjects"] = self.subjectToPass
-        subObj["professor"] = self.professorsToPass
-        //profObj["owner"] = PFUser.current()!
-        profObj.saveInBackground{(success , error) in
+        let post = PFObject(className: "posts")
+        let professor = PFObject(className: "professor")
+        let subject = PFObject(className: "subject")
+
+        
+        professor["name"] = self.professorsToPass
+        professor["subjects"] = [self.subjectToPass]
+        professor["Quality_Rating"] = Int(self.qualityRatingLabel.text!)
+        professor["Difficulty_Rating"] = Int(self.difficultyRatingLabel.text!)
+        professor["NumberOfRatings"] = 1
+        professor["Raw_Difficulty_Rating"] = Int(self.difficultyRatingLabel.text!)
+        professor["Raw_Quality_Rating"] = Int(self.qualityRatingLabel.text!)
+        professor["reviews"] = [self.reviewTextView.text!]
+        
+        
+        subject["subject"] = self.subjectToPass
+        subject["professors"] = [self.professorsToPass]
+        
+        post["name"] = self.professorsToPass
+        post["subject"] = self.subjectToPass
+        post["Quality_Rating"] = Int(self.qualityRatingLabel.text!)
+        post["Difficulty_Rating"] = Int(self.difficultyRatingLabel.text!)
+        post["review"] = self.reviewTextView.text!
+        professor.saveInBackground{(success , error) in
             if success{
                 print("Saved")
             } else {
                 print("Error Saving!")
             }
         }
-        //subObj["owner"] = PFUser.current()!
-        subObj.saveInBackground{(success , error) in
+        
+        subject.saveInBackground{(success , error) in
             if success{
                 print("Saved")
-                
             } else {
                 print("Error Saving!")
             }
         }
+        
+        post["owner"] = PFUser.current()!
+        post.saveInBackground{(success , error) in
+            if success{
+                print("Saved")
+            } else {
+                print("Error Saving!")
+            }
+        }
+        
+    }
+    
+    private func AddPostNewSubject(){
+        let professor = self.professor
+        let subject = PFObject(className: "subject")
+        var Subarr = professor["subjects"] as! Array<String>
+        var Revarr = professor["reviews"] as! Array<String>
+        print("professor ID = \(self.ProfessorID)")
+
+        print(Prquery)
+        print("working")
+        print(professor)
+        print(professor["name"] as! String)
+        let post = PFObject(className: "posts")
+        post["name"] = professor["name"]
+        print(professor)
+        post["subject"] = self.subjectToPass
+        post["Quality_Rating"] = Int(self.qualityRatingLabel.text!)
+        post["Difficulty_Rating"] = Int(self.difficultyRatingLabel.text!)
+        post["review"] = self.reviewTextView.text!
+        post["owner"] = PFUser.current()!
+        post.saveInBackground{(success , error) in
+            if success{
+                print("Saved")
+            } else {
+                print("Error Saving!")
+            }
+        }
+        
+        Subarr.append(self.subjectToPass )
+        let sortedSubs = Array(Set(Subarr))
+        professor["subjects"] = sortedSubs
+        
+        let number = (professor["NumberOfRatings"] as! Int) + 1
+        professor["NumberOfRatings"] = number
+        let RawDif = (professor["Raw_Difficulty_Rating"] as! Int) + Int(self.difficultyRatingLabel.text!)!
+        professor["Raw_Difficulty_Rating"] =  RawDif
+        let RawQual = (professor["Raw_Quality_Rating"] as! Int) + Int(self.qualityRatingLabel.text!)!
+        professor["Raw_Quality_Rating"] = RawQual
+        professor["Quality_Rating"] = Float(RawQual)  / Float(number)
+        professor["Difficulty_Rating"] = Float(RawDif) / Float(number)
+        Revarr.append(self.reviewTextView.text!)
+        professor["reviews"] = Revarr
+        post["owner"] = PFUser.current()!
+        post.saveInBackground{(success , error) in
+            if success{
+                print("Saved")
+            } else {
+                print("Error Saving!")
+            }
+        }
+        professor.saveInBackground{(success , error) in
+            if success{
+                print("Saved")
+            } else {
+                print("Error Saving!")
+            }
+        }
+        
+        subject["subject"] = self.subjectToPass
+        subject["professors"] = [professor["name"]]
+        
+        subject.saveInBackground{(success , error) in
+            if success{
+                print("Saved")
+            } else {
+                print("Error Saving!")
+            }
+        }
+        
+        
+        
+    }
+    private func AddNewPost(){
+        let professor = self.professor
+        let subject = self.subject
+        var Subarr = professor["subjects"] as! Array<String>
+        var Revarr = professor["reviews"] as! Array<String>
+        var Profarr = subject["professors"] as! Array<String>
+       
+        let post = PFObject(className: "posts")
+        post["name"] = professor["name"]
+        post["subject"] = subject["subject"]
+        post["Quality_Rating"] = Int(self.qualityRatingLabel.text!)
+        post["Difficulty_Rating"] = Int(self.difficultyRatingLabel.text!)
+        post["review"] = self.reviewTextView.text!
+        post["owner"] = PFUser.current()!
+        
+        post.saveInBackground{(success , error) in
+            if success{
+                print("Saved")
+            } else {
+                print("Error Saving!")
+            }
+        }
+        
+        Subarr.append(subject["subject"] as! String)
+        let sortedSubs = Array(Set(Subarr))
+        professor["subjects"] = sortedSubs
+        
+        let number = (professor["NumberOfRatings"] as! Int) + 1
+        professor["NumberOfRatings"] = number
+        let RawDif = (professor["Raw_Difficulty_Rating"] as! Int) + Int(self.difficultyRatingLabel.text!)!
+        professor["Raw_Difficulty_Rating"] =  RawDif
+        let RawQual = (professor["Raw_Quality_Rating"] as! Int) + Int(self.qualityRatingLabel.text!)!
+        professor["Raw_Quality_Rating"] = RawQual
+        Revarr.append(self.reviewTextView.text!)
+        
+        
+        professor["Quality_Rating"] = Float(RawQual)  / Float(number)
+        professor["Difficulty_Rating"] = Float(RawDif) / Float(number)
+        
+        professor["reviews"] = Revarr
+
+        professor.saveInBackground{(success , error) in
+            if success{
+                print("Saved")
+            } else {
+                print("Error Saving!")
+            }
+        }
+
+        Profarr.append(professor["name"] as! String)
+        let sortedProfarr = Array(Set(Profarr))
+        subject["professors"] = sortedProfarr
+        subject.saveInBackground{(success , error) in
+            if success{
+                print("Saved")
+            } else {
+                print("Error Saving!")
+            }
+        }
+
+        
+    }
+    
+    private func AddPostNewProfessor(){
+        let subject = self.subject
+        let post = PFObject(className: "posts")
+        let professor = PFObject(className: "professor")
+        
+        professor["name"] = self.professorsToPass
+        professor["subjects"] = [self.subject["subject"]]
+        professor["Quality_Rating"] = Int(self.qualityRatingLabel.text!)
+        professor["Difficulty_Rating"] = Int(self.difficultyRatingLabel.text!)
+        professor["NumberOfRatings"] = 1
+        professor["Raw_Difficulty_Rating"] = Int(self.difficultyRatingLabel.text!)
+        professor["Raw_Quality_Rating"] = Int(self.qualityRatingLabel.text!)
+        professor["reviews"] = [self.reviewTextView.text!]
+        
+        professor.saveInBackground{(success , error) in
+            if success{
+                print("Saved")
+            } else {
+                print("Error Saving!")
+            }
+        }
+        
+        post["name"] = professor["name"]
+        post["subject"] = subject["subject"]
+        post["Quality_Rating"] = Int(self.qualityRatingLabel.text!)
+        post["Difficulty_Rating"] = Int(self.difficultyRatingLabel.text!)
+        post["review"] = self.reviewTextView.text!
+        post["owner"] = PFUser.current()!
+        
+        post.saveInBackground{(success , error) in
+            if success{
+                print("Saved")
+            } else {
+                print("Error Saving!")
+            }
+        }
+        
+        var Profarr = subject["professors"] as! Array<String>
+        Profarr.append(professor["name"] as! String)
+        let sortedProfarr = Array(Set(Profarr))
+        subject["professors"] = sortedProfarr
+        subject.saveInBackground{(success , error) in
+            if success{
+                print("Saved")
+            } else {
+                print("Error Saving!")
+            }
+        }
+        
         
         
         
