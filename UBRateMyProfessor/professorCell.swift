@@ -11,6 +11,7 @@ class professorCell: UITableViewCell {
 
     @IBOutlet weak var professorName: UILabel!
     @IBOutlet weak var overallrating: UILabel!
+    @IBOutlet weak var difficultyRating: UILabel!
     @IBOutlet weak var subjectsList: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

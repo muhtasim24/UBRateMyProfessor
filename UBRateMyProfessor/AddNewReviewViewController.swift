@@ -64,6 +64,7 @@ class AddNewReviewViewController: UIViewController, UIPickerViewDataSource, UIPi
             }            
             
         }
+        self.profs = self.profs.sorted(by: { (Object1: PFObject,Object2:PFObject) -> Bool in return (Object1["name"] as! String) < (Object2["name"] as! String)})
         
         Subquery = PFQuery(className: "subject")
         do {
@@ -78,6 +79,7 @@ class AddNewReviewViewController: UIViewController, UIPickerViewDataSource, UIPi
             // Couldn't create audio player object, log the error
             print("shit")
         }
+        self.subjects = self.subjects.sorted(by: { (Object1: PFObject,Object2:PFObject) -> Bool in return (Object1["subject"] as! String) < (Object2["subject"] as! String)})
         
         Subquery.findObjectsInBackground{( subjects, error) in
             if subjects != nil {

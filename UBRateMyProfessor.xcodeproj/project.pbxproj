@@ -22,7 +22,6 @@
 		ABCCB44E7246A6044DC8946D /* Pods_UBRateMyProfessor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A0AD4A7299D241804B8407 /* Pods_UBRateMyProfessor.framework */; };
 		B4AEDD37D704928E1FBCCE3D /* Pods_UBRateMyProfessor_UBRateMyProfessorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC923277FE3C9B97F0350B7A /* Pods_UBRateMyProfessor_UBRateMyProfessorUITests.framework */; };
 		D803DA0228065FAB00F2F67B /* PostsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D803DA0128065FAB00F2F67B /* PostsController.swift */; };
-		D803DA0428078A1E00F2F67B /* ProfessorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D803DA0328078A1E00F2F67B /* ProfessorsViewController.swift */; };
 		D803DA0628078A5500F2F67B /* professorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D803DA0528078A5500F2F67B /* professorCell.swift */; };
 		D8F2228F280CB5A600B7182E /* ProfessorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F2228E280CB5A600B7182E /* ProfessorsTableViewController.swift */; };
 		DE7094D78017FD665022A9EE /* Pods_UBRateMyProfessorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A442AD9D32C92123A836A8F /* Pods_UBRateMyProfessorTests.framework */; };
@@ -70,7 +69,6 @@
 		AAE2B947BBD0E36ECD72FDCF /* Pods-UBRateMyProfessorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBRateMyProfessorTests.debug.xcconfig"; path = "Target Support Files/Pods-UBRateMyProfessorTests/Pods-UBRateMyProfessorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5389B4497EEB7497D32325D /* Pods-UBRateMyProfessor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBRateMyProfessor.release.xcconfig"; path = "Target Support Files/Pods-UBRateMyProfessor/Pods-UBRateMyProfessor.release.xcconfig"; sourceTree = "<group>"; };
 		D803DA0128065FAB00F2F67B /* PostsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsController.swift; sourceTree = "<group>"; };
-		D803DA0328078A1E00F2F67B /* ProfessorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorsViewController.swift; sourceTree = "<group>"; };
 		D803DA0528078A5500F2F67B /* professorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = professorCell.swift; sourceTree = "<group>"; };
 		D8F2228E280CB5A600B7182E /* ProfessorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorsTableViewController.swift; sourceTree = "<group>"; };
 		FC923277FE3C9B97F0350B7A /* Pods_UBRateMyProfessor_UBRateMyProfessorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBRateMyProfessor_UBRateMyProfessorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,7 +132,6 @@
 				9BE7897627FA017900DF95AE /* SceneDelegate.swift */,
 				9BE7897827FA017900DF95AE /* ViewController.swift */,
 				9BE7897A27FA017900DF95AE /* Main.storyboard */,
-				D803DA0328078A1E00F2F67B /* ProfessorsViewController.swift */,
 				D8F2228E280CB5A600B7182E /* ProfessorsTableViewController.swift */,
 				D803DA0528078A5500F2F67B /* professorCell.swift */,
 				D803DA0128065FAB00F2F67B /* PostsController.swift */,
@@ -430,7 +427,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D803DA0428078A1E00F2F67B /* ProfessorsViewController.swift in Sources */,
 				9BF7728928078BDB00ED7E41 /* AddNewReviewViewController.swift in Sources */,
 				9BE7897927FA017900DF95AE /* ViewController.swift in Sources */,
 				D803DA0228065FAB00F2F67B /* PostsController.swift in Sources */,
