@@ -12,7 +12,8 @@ class ProfessorsTableViewController: UITableViewController {
     var professors :[PFObject] = []
     var Prquery = PFQuery(className: "professor")
     var refresher: UIRefreshControl!
-
+    @IBOutlet weak var searchbar: UISearchBar!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class ProfessorsTableViewController: UITableViewController {
         self.loadProfessors()
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        self.searchbar.delegate = self
         
 
         // Uncomment the following line to preserve selection between presentations
@@ -188,4 +190,8 @@ class ProfessorsTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension ProfessorsTableViewController: UISearchBarDelegate {
+    
 }
