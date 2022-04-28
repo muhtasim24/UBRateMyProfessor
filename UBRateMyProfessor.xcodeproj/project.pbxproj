@@ -23,6 +23,8 @@
 		B4AEDD37D704928E1FBCCE3D /* Pods_UBRateMyProfessor_UBRateMyProfessorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC923277FE3C9B97F0350B7A /* Pods_UBRateMyProfessor_UBRateMyProfessorUITests.framework */; };
 		D803DA0228065FAB00F2F67B /* PostsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D803DA0128065FAB00F2F67B /* PostsController.swift */; };
 		D803DA0628078A5500F2F67B /* professorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D803DA0528078A5500F2F67B /* professorCell.swift */; };
+		D86F9A52281A05CF0055112E /* PersonalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F9A51281A05CF0055112E /* PersonalCell.swift */; };
+		D86F9A54281A0B910055112E /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F9A53281A0B910055112E /* PersonalViewController.swift */; };
 		D8F2228F280CB5A600B7182E /* ProfessorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F2228E280CB5A600B7182E /* ProfessorsTableViewController.swift */; };
 		DE7094D78017FD665022A9EE /* Pods_UBRateMyProfessorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A442AD9D32C92123A836A8F /* Pods_UBRateMyProfessorTests.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +72,8 @@
 		B5389B4497EEB7497D32325D /* Pods-UBRateMyProfessor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBRateMyProfessor.release.xcconfig"; path = "Target Support Files/Pods-UBRateMyProfessor/Pods-UBRateMyProfessor.release.xcconfig"; sourceTree = "<group>"; };
 		D803DA0128065FAB00F2F67B /* PostsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsController.swift; sourceTree = "<group>"; };
 		D803DA0528078A5500F2F67B /* professorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = professorCell.swift; sourceTree = "<group>"; };
+		D86F9A51281A05CF0055112E /* PersonalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCell.swift; sourceTree = "<group>"; };
+		D86F9A53281A0B910055112E /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		D8F2228E280CB5A600B7182E /* ProfessorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorsTableViewController.swift; sourceTree = "<group>"; };
 		FC923277FE3C9B97F0350B7A /* Pods_UBRateMyProfessor_UBRateMyProfessorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBRateMyProfessor_UBRateMyProfessorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEEAFECA1A493415CB927B41 /* Pods-UBRateMyProfessor-UBRateMyProfessorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBRateMyProfessor-UBRateMyProfessorUITests.debug.xcconfig"; path = "Target Support Files/Pods-UBRateMyProfessor-UBRateMyProfessorUITests/Pods-UBRateMyProfessor-UBRateMyProfessorUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,10 +132,12 @@
 		9BE7897327FA017900DF95AE /* UBRateMyProfessor */ = {
 			isa = PBXGroup;
 			children = (
+				D86F9A51281A05CF0055112E /* PersonalCell.swift */,
 				9BE7897427FA017900DF95AE /* AppDelegate.swift */,
 				9BE7897627FA017900DF95AE /* SceneDelegate.swift */,
 				9BE7897827FA017900DF95AE /* ViewController.swift */,
 				9BE7897A27FA017900DF95AE /* Main.storyboard */,
+				D86F9A53281A0B910055112E /* PersonalViewController.swift */,
 				D8F2228E280CB5A600B7182E /* ProfessorsTableViewController.swift */,
 				D803DA0528078A5500F2F67B /* professorCell.swift */,
 				D803DA0128065FAB00F2F67B /* PostsController.swift */,
@@ -436,6 +442,8 @@
 				5DFCBE742807892E007BAE86 /* LoginViewController.swift in Sources */,
 				5DFCBE762807893F007BAE86 /* FeedViewController.swift in Sources */,
 				9BE7897727FA017900DF95AE /* SceneDelegate.swift in Sources */,
+				D86F9A52281A05CF0055112E /* PersonalCell.swift in Sources */,
+				D86F9A54281A0B910055112E /* PersonalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

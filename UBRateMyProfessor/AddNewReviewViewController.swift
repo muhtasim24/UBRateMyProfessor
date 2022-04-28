@@ -25,6 +25,8 @@ class AddNewReviewViewController: UIViewController, UIPickerViewDataSource, UIPi
     var subject = PFObject(className: "subject")
     var Subquery = PFQuery(className: "subject")
     var SubjectID : String = ""
+    //var posts: PFQuery<PFObject>
+    var postsArray: [PFObject] = []
     
     
     var boolProfText : Bool = false
@@ -89,6 +91,41 @@ class AddNewReviewViewController: UIViewController, UIPickerViewDataSource, UIPi
             }
             
         }
+        
+        let posts = PFQuery(className: "posts")
+        posts.limit = 20
+        /*{
+        self.posts = posts.whereKey("name", equalTo: "Ethan Blanton")
+        } catch {
+            print("did not work")
+        }*/
+        posts.whereKey("name", equalTo: "Ethan Blanton")
+        do {
+            // Create audio player object
+            //print(try query.findObjects())
+            try self.postsArray = posts.findObjects()
+                    
+            // Play the sound
+
+        }
+        catch {
+            // Couldn't create audio player object, log the error
+            print("shit")
+        }
+        /*posts.findObjectsInBackground{( posts, error) in
+            if posts != nil {
+                self.postsArray = posts!
+                
+            } else {
+                print("Empty posts list")
+            }
+            
+        }*/
+        print("poop")
+        print(self.postsArray)
+
+        
+        
         
         
 
