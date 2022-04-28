@@ -107,7 +107,7 @@ class ProfessorsTableViewController: UITableViewController {
         
     }
 
-    /*override func numberOfSections(in tableView: UITableView) -> Int {
+    /*override func numberOfSections(in tableView: UITableView) -> Int {`
         // #warning Incomplete implementation, return the number of sections
         return 1
     }*/
@@ -160,6 +160,18 @@ class ProfessorsTableViewController: UITableViewController {
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if ( sender != nil){
+        
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPath(for: cell)!
+            let professor = self.professors[indexPath.row]
+        
+            let detailsViewController = segue.destination as! PersonalViewController
+            detailsViewController.professor = professor
+        }
     }
     
 
