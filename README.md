@@ -31,22 +31,22 @@ This app is a strip down version of Rate my Professor solely for UB students and
 - [X] User can create a review/rating
 - [X] User can add to the list of professors
 - [X] User can add to the list of subjects
-- [ ] User can search up professors
-- [ ] User can view all ratings and all subjects for each professor
+- [X] User can view all ratings and all subjects for each professor
 - [X] User can view the feed
 - [X] User can refresh the feed
 - [X] User can create an account
 - [X] User can login
 - [X] User stays logged in across restarts
 - [X] User can logout
-- [ ] User can add classes that each professor taught
-    - [ ] as text/searchs box 
 
 **Optional Nice-to-have Stories**
 
 - [ ] List best teachers for each subject (build schedule of ideal teachers using classes)
 - [ ] Alerts for Professors when they recieve a review/rating
 - [ ] Schedule
+- [ ] User can add classes that each professor taught
+    - [ ] as text/searchs box 
+- [ ] User can search up professors
 
 ### 2. Screen Archetypes
 * Login Screen
