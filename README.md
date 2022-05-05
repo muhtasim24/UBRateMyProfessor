@@ -40,6 +40,7 @@ This app is a strip down version of Rate my Professor solely for UB students and
 - [X] User can logout
 - [X] User can click on a Detailed Professor Profile
 - [X] User can see all reviews on Professors' Profile
+
 **Optional Nice-to-have Stories**
 
 - [ ] List best teachers for each subject (build schedule of ideal teachers using classes)
@@ -203,13 +204,18 @@ This app is a strip down version of Rate my Professor solely for UB students and
 
 Here's a walkthrough of implemented user stores:
 
+Week 4:
 <img src= 'http://g.recordit.co/bHfHpQMGRh.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+Week 3:
 <img src= 'http://g.recordit.co/hCHqxGSoCy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+Week 2:
 <img src= 'http://g.recordit.co/jNhapE9g7t.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+Week 2:
 <img src= 'http://g.recordit.co/IIEeawoutZ.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+Week 1:
 <img src= 'https://github.com/CS-UBRateMyProfessor/RateMyProfessor/blob/main/Week1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
